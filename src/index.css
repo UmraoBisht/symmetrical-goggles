@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*________________________________*\
+* BASE
+\*________________________________*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-900 text-zinc-50 h-[200vh];
+}
+
+/*________________________________*\
+* Utility
+\*________________________________*/
+
+.container {
+  @apply px-4 mx-auto lg:max-w-6xl lg:px-8;
+}
+
+.img-box {
+  @apply bg-zinc-700 overflow-hidden;
+}
+
+.img-cover {
+  @apply w-full h-full object-cover;
+}
+
+.section {
+  @apply pt-20 lg:pt-32;
+}
+
+.reveal-up {
+  @apply translate-y-20 opacity-0;
+}
+
+/*________________________________*\
+* Typpography
+\*________________________________*/
+
+.headline-1,
+.headline-2 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #CBF1F5,#A6E3E9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline-1 {
+  @apply text-5xl font-semibold leading-snug lg:leading-snug lg:text-[45px];
+}
+
+.headline-2 {
+  @apply text-3xl lg:text-4xl font-semibold leading-tight;
+}
+
+.title-1 {
+  @apply text-lg font-normal;
+}
+
+/*________________________________*\
+* text fields
+\*________________________________*/
+
+.label {
+  @apply block text-sm font-normal text-zinc-200 mb-2;
+}
+
+.text-field {
+  @apply block outline-none w-full p-3 text-sm bg-zinc-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-zinc-50/5 focus:ring-sky-400 focus:ring-2;
+}
+
+.text-field::placeholder {
+  @apply text-zinc-400;
+}
